@@ -81,7 +81,7 @@ export const instructionsCollection = (options?: Partial<CollectionConfig>) =>
         name: 'relation-to',
         type: 'text',
         admin: {
-          condition: (_, current) => {
+          condition: (current, _) => {
             return current['field-type'] === 'upload'
           },
         },
@@ -136,7 +136,7 @@ export const instructionsCollection = (options?: Partial<CollectionConfig>) =>
                 name: 'system',
                 type: 'textarea',
                 admin: {
-                  condition: (_, current) => {
+                  condition: (current, _) => {
                     return current['field-type'] === 'richText'
                   },
                 },
@@ -169,7 +169,7 @@ informative and accurate but also captivating and beautifully structured.`,
                 name: 'layout',
                 type: 'textarea',
                 admin: {
-                  condition: (_, current) => {
+                  condition: (current, _) => {
                     return current['field-type'] === 'richText'
                   },
                 },
